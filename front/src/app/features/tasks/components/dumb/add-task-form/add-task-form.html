@@ -1,0 +1,45 @@
+<div class="input-section">
+    <h3>Ajouter une nouvelle tâche</h3>
+    <form action="" [formGroup]="taskForm" >
+        <div class="form-group">
+            <label class="form-label">Titre de la tâche</label>
+            <input type="text" formControlName="title" id="taskTitle" placeholder="Entrez le titre de votre tâche...">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Description (optionnelle)</label>
+            <textarea id="taskDescription" formControlName="description"
+                placeholder="Ajoutez une description détaillée..."></textarea>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label">Catégorie</label>
+                <select formControlName="categorie" id="taskCategory">
+                    <option  value="Travail">Travail</option>
+                    <option value="Personnel">Personnel</option>
+                    <option value="Courses">Courses</option>
+                    <option value="Sante">Santé</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Priorité</label>
+                <select formControlName="priorite" id="taskPriority">
+                    <option value="Basse">Basse</option>
+                    <option  value="Normale">Normale</option>
+                    <option value="Haute">Haute</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Échéance</label>
+                <input formControlName="echeance" type="date" id="taskDueDate">
+            </div>
+
+            <button class="btn btn-primary" [disabled]="taskForm.invalid" (click)="addTask()" type="button">
+                <span>➕</span> Ajouter
+            </button>
+        </div>
+    </form>
+</div>

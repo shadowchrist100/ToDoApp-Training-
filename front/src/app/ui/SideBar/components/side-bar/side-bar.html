@@ -1,0 +1,52 @@
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <div class="sidebar-header">
+        <div class="logo">
+            <span>✓</span> TaskFlow
+        </div>
+        <div class="logo-subtitle">Premium Task Manager</div>
+    </div>
+
+    <ul class="menu">
+        <li class="menu-item">
+            <a class="menu-link" [class.active] = "isAllActive" (click)="switchView('All')">
+                <span>📋</span> Toutes les tâches
+            </a>
+        </li>
+        <li class="menu-item">
+            <a class="menu-link" [class.active]="isTodayActive" (click)="switchView('Today')">
+                <span>⭐</span> Aujourd'hui
+            </a>
+        </li>
+        <li class="menu-item">
+            <a class="menu-link" [class.active]="isUpcomingActive" (click)="switchView('Upcoming')">
+                <span>🚀</span> À venir
+            </a>
+        </li>
+        <li class="menu-item">
+            <a class="menu-link" [class.active]="isCompletedActive" (click)="switchView('Completed')">
+                <span>✅</span> Complétées
+            </a>
+        </li>
+    </ul>
+
+    <div class="categories-section">
+        <div class="section-title">Catégories</div>
+        <div class="category-item" (click)="filterByCategory('Travail')">
+            <div class="category-dot" style="background: #ef4444;"></div>
+            Travail
+        </div>
+        <div class="category-item" (click)="filterByCategory('Personnel')">
+            <div class="category-dot" style="background: #3b82f6;"></div>
+            Personnel
+        </div>
+        <div class="category-item" (click)="filterByCategory('Courses')">
+            <div class="category-dot" style="background: #f59e0b;"></div>
+            Courses
+        </div>
+        <div class="category-item" (click)="filterByCategory('Sante')">
+            <div class="category-dot" style="background: #10b981;"></div>
+            Santé
+        </div>
+    </div>
+</aside>

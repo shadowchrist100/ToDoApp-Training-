@@ -1,0 +1,1 @@
+export type categorie = "Travail" | "Personnel" | "Courses" | "Sante"

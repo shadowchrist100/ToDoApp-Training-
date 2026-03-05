@@ -1,0 +1,1 @@
+export type option = "All" | "Today" | "Upcoming" | "Completed";
